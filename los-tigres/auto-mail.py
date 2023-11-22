@@ -3,7 +3,7 @@ import pandas as pd
 
 # Iniciamos sesión en el email del club
 
-ruta_email = 'los-tigres\credenciales.txt'
+ruta_email = 'credenciales.txt'
 mail, contrasenia = func.usuario_constrasenia(ruta_email)
 
 # Creamos la funcion principal
@@ -18,7 +18,7 @@ def main():
         
         # Utilizando la base proporcionada por nosotros
         if opcion == 1:
-            path = 'los-tigres\club-de-futbol-los-tigres(base-datos).xlsx'
+            path = 'club-de-futbol-los-tigres(base-datos).xlsx'
             datos = pd.read_excel(path)
             datos_df = pd.DataFrame(datos)
             datos_df = datos_df.drop('Marca temporal', axis=1)
